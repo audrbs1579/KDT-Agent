@@ -8,7 +8,7 @@
     <text x="600" y="80" font-size="16">운영 인프라: @msacademy 계정의 회사 ‘엘릭서’ 구독</text>
     <rect x="230" y="106" width="740" height="80" rx="12" fill="#dceaff" stroke="#aac5ed"/>
     <text x="600" y="139" font-size="21" font-weight="700">직원 Teams 탭 · 웹 대시보드 · 캘린더 일정 연동</text>
-    <text x="600" y="167" font-size="16">자동 예약·실행 / 원본 편집·Forms 게시·승인은 사람 담당</text>
+    <text x="600" y="167" font-size="16">강의 종료별 Forms 3항목 자동화 / 중요 결정·예외는 사람</text>
     <path d="M600 188 V214" stroke="#4973aa" stroke-width="3" marker-end="url(#arrow)"/>
     <rect x="120" y="226" width="960" height="94" rx="12" fill="#fff" stroke="#aac5ed"/>
     <text x="600" y="261" font-size="22" font-weight="700">업무 서버 + AI PM</text>
@@ -52,7 +52,7 @@
     <text x="965" y="815" font-size="15">산출물 · 중간평가문제 · 출석부</text>
     <text x="965" y="841" font-size="15">호명 원본 읽기 / 덮어쓰기 금지</text>
     <text x="965" y="875" font-size="16" font-weight="700">학생 공개 자료와 분리</text>
-    <text x="600" y="928" font-size="15">폴더·파일명·날짜·강사명은 참고 예시 / Forms는 사람이 Excel 다운로드 후 저장 / 실제 연동 완료 아님</text>
+    <text x="600" y="928" font-size="15">강의 Forms → 자동 수집·집계·결과 저장 설계 / 실제 연동 검증 필요</text>
     <rect x="120" y="965" width="960" height="76" rx="12" fill="#193c67"/>
     <text x="600" y="995" font-size="21" fill="#fff" font-weight="700">공통 업무 장부 · 처리 사본 · 비밀 · 실행 기록</text>
     <text x="600" y="1024" font-size="16" fill="#fff">PostgreSQL / 필요한 Blob 사본 / Key Vault / Azure Monitor</text>

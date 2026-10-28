@@ -2,7 +2,7 @@
 
 [문서 목록](00_보고서_안내.md)
 
-기존 조사 정보 기준: 2026-10-18~20 · 참고 기준 정리: 2026-10-21
+기존 조사 정보 기준: 2026-10-18~20 · 참고 기준 정리: 2026-10-21 · 과정 종료 Forms 경로 보완: 2026-10-28
 
 ## 1. 확인 수준
 
@@ -41,16 +41,17 @@
 | R08 | Azure Blob Storage | 원본·증거·내보내기 파일 | `@msacademy` 엘릭서 구독 · Korea Central | 원본은 `@dataschool` SharePoint 우선. Blob은 그 외 처리 사본만 | 가격 | 기존 SharePoint에 없는 파일 또는 필요한 처리 사본. 보관 등급 자동 이동·기한 삭제 |
 | R09 | Azure Key Vault + Managed Identity | 비밀과 서비스 신원 | `@msacademy` 엘릭서 구독 · Korea Central | `@elixirr`·`@dataschool` 연결 앱 인증서, 외부 사이트 자격 증명 보관 | 기능(보안) | 앱 인증서·사이트 자격 증명 보호, 비밀값을 모델에 전달하지 않음. HSM이 필요 없어 Standard 등급 |
 | R10 | Azure Monitor / Application Insights | 실행·장애 관제 | `@msacademy` 엘릭서 구독 · Korea Central | `@msacademy`만. 경보는 `@elixirr` 운영 채널로 발송 | 가격 | 지연·실패·비용·연결 만료 추적. 수집량 과금이라 샘플링·보존 기간 관리, 민감 원문 로그 제외 |
-| R11 | Foundry Browser Automation / Playwright Workspaces | 웹사이트를 여는 손 | `@msacademy` 엘릭서 구독 · 지원 리전은 생성 전 확인 | `@dataschool` Teams 웹 일정·참석 CSV, 외부 LMS·출결 사이트 | 기능 | 채널 수업 생성·변경, 파일 업로드·다운로드. 사이트별 검증된 절차 사용. M365 로그인·조건부 접근은 별도 확인하며 Windows 데스크톱 제어와 구분 |
+| R11 | Foundry Browser Automation / Playwright Workspaces | 웹사이트를 여는 손 | `@msacademy` 엘릭서 구독 · 지원 리전은 생성 전 확인 | `@dataschool` Teams 웹 일정·참석 CSV, 외부 LMS·출결 사이트 | 기능 | 채널 수업 생성·변경, 과정 종료 만족도 Forms 템플릿 복제·제목/날짜/강사·응답 설정·링크 확보, 파일 업로드·다운로드. 사이트별 검증된 절차 사용. M365 로그인·조건부 접근은 별도 확인하며 Windows 데스크톱 제어와 구분 |
 | R12 | 전용 Azure Windows VM + Power Automate for desktop | 데스크톱 프로그램을 다루는 손(필요 시) | `@msacademy` 엘릭서 구독 · Korea Central | 브라우저 밖 데스크톱 작업 필요 시 사용 | 기능 → 가동 시간으로 가격 조절 | 웹 브라우저로 안 되는 데스크톱 작업이 필요할 때만 운영 시간 가동 |
 | R13 | Foundry computer use tool / `computer-use-preview` | 화면을 보고 다음 클릭 제안 | `@msacademy` 엘릭서 구독 · **테스트·운영에서 선택할 지원 리전** | `@msacademy`. 조작 대상은 허용된 실행 환경 | 기능 | 당시 리전별 제공 이력은 06 참고. 지원 모델·리전·비용을 테스트·운영에서 재선택하며 정형 작업은 Playwright/PAD 우선 |
 | R16 | Azure Content Understanding in Foundry Tools (+ 서버 내 한글 `.hwp`/`.hwpx` 파서·변환기) | 비정형 문서·이미지·영상에서 필요한 정보 추출 | `@msacademy` 엘릭서 구독 · Korea Central(지원 여부 확인) | 입력 자료는 `@dataschool` 교안·수강생 비정형 문서(자소서·이력서·포트폴리오·증빙)·수업 녹화 | 기능 + 가격 | PDF·Word(`.docx`/`.doc`)·PowerPoint(`.pptx`/`.ppt`)·Excel·**HTML(`.html`)/Markdown(`.md`)/TXT/RTF/ODT**·이미지·음성·영상은 R16이 기본 지원하며, **아래아한글(`.hwp`/`.hwpx`)은 서버(R02) 내 전용 파서(`.hwpx` XML/표 추출, `.hwp` OLE 파싱 또는 PDF 변환)로 전처리**해 추출. 분석량 과금이라 필요한 문서·표본 구간만 분석 |
 | R17 | Azure AI Search | 검색 전용 확장 옵션 | 도입 시 `@msacademy` 엘릭서 구독 · Korea Central | `@msacademy`만 | 가격(보류 사유) | R07 검색이 요구량/기능을 충족하지 못할 때 도입. 처음부터 중복 인덱스 운영 안 함 |
-| R18 | 기존 Exchange Online·Teams·SharePoint·Forms | 일정·소통·사람의 문서 공동 편집·Forms 응답 | **Azure에 생성하지 않음** — 기존 M365 테넌트 | `@elixirr`: 직원 일정·메일·Teams / `@dataschool`: 채널 수업·교육 자료·Forms. 실제 Teams·SharePoint 경로·채널 유형은 구조 확인 후 확정 | 가격(기존 라이선스 재사용) | Graph로 허용 파일을 다운로드·파싱하고 별도 결과 파일 저장. 원본 셀·Word 편집과 Forms 게시·정답 설정은 사람 담당. `Sites.Selected`가 무인 Excel 셀 API를 허용하는 것은 아님 |
+| R18 | 기존 Exchange Online·Teams·SharePoint·Forms | 일정·소통·사람의 문서 공동 편집·Forms 응답 | **Azure에 생성하지 않음** — 기존 M365 테넌트 | `@elixirr`: 직원 일정·메일·Teams / `@dataschool`: 채널 수업·교육 자료·Forms. 실제 Teams·SharePoint 경로·채널 유형은 구조 확인 후 확정 | 가격(기존 라이선스 재사용) | Graph로 허용 파일을 다운로드·파싱하고 별도 결과 파일 저장. 원본 셀·Word 편집과 퀴즈 검수·정답 설정/게시 등은 해당 기능의 사람 업무. 과정 종료 만족도는 R11 화면 실행 + R19 응답 수집으로 자동화. `Sites.Selected`가 무인 Excel 셀 API를 허용하는 것은 아님 |
+| R19 | Azure Logic Apps Consumption + Microsoft Forms API 연결 | 강의별 새 응답 수집·상세 조회·Service Bus 전달 | `@msacademy` 엘릭서 구독 · 커넥터 지원 리전 확인 | `@dataschool` 조직 계정으로 최초 OAuth 인증. Graph 앱 전용 인증과 별개 | 기능 + 사용량 과금 | 양식별 form_id·문항 매핑·워크플로 연결. 새 양식 자동 배치·인증 재사용·중복/장애 복구는 POC 검증. 최소 배치 권한·실행 이력 접근 제한 |
 
 ### 2.3 선정 중심 조사 결과
 
-Forms 응답은 **응답 화면에서 사람이 Excel 다운로드/내보내기 → 지정 위치에 전달 → 에이전트 수집·정리**가 기본입니다. 다운로드 파일을 자동 동기화 파일로 가정하지 않으며 새 응답은 다시 내려받습니다.
+**기수별 하루 강의는 1개이며 같은 날 여러 기수가 동시 운영됩니다. 만족도는 각 기수의 전체 과정 종료 시 1회, 객관식 2개·주관식 1개의 Forms만 운영합니다.** R11/F19의 승인된 템플릿 준비 → 과정별 R19 연결 → 과정 종료 확인·기본 안내 1회 → 응답 수집·DB 집계·결과 저장을 개발합니다. 공식 커넥터의 응답 수집 기능은 확인했으며 생성/복제 액션을 제공한다고 가정하지 않습니다. UI·인증·양식별 연결은 실제 검증 대상입니다. 퀴즈·참가 신청 등 다른 목적 Forms의 단계는 해당 기능 기준이며 만족도 다운로드 Excel은 복구·대조용입니다. 연결 Excel과 다운로드 사본도 구분합니다([F06 상세](기능/F06_만족도조사.md)).
 
 이 프로젝트의 업무는 대부분 **정해진 시각에 빠짐없이 실행되어야 하는 일**입니다. 1개월 단위 수업 이벤트 생성, 전날 강사 확인, 입퇴실·중간 출결, 퀴즈, 만족도 발송이 여기에 해당합니다. 1초 안에 응답해야 하는 일은 적습니다. 그래서 아래 순서로 판단했습니다.
 
